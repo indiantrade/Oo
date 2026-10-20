@@ -1,165 +1,208 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="hi">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title> GUJRATI TRADER - Learning Community</title>
-<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Trade with Purab Darda - Telegram Channel</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+        }
 
-<style>
-  body {
-    margin: 0;
-    padding: 0;
-    font-family: 'Poppins', sans-serif;
-    background-color: #000;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    min-height: 100vh;
-  }
+        body {
+            background-color: #0b0e14;
+            color: #ffffff;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: space-between;
+            min-height: 100vh;
+            padding: 20px 15px;
+        }
 
-  .card {
-    width: 85%;
-    max-width: 340px; 
-    background: #010a0f;
-    border: 1.5px solid #00d2ff;
-    border-radius: 35px;
-    padding: 20px 15px;
-    text-align: center;
-    box-shadow: 0 0 25px rgba(0, 210, 255, 0.15);
-  }
+        .container {
+            width: 100%;
+            max-width: 420px;
+            text-align: center;
+            margin: auto 0;
+        }
 
-  .profile-img {
-    width: 110px;
-    height: 110px;
-    border-radius: 50%;
-    border: 3px solid #00d2ff;
-    object-fit: cover;
-    margin-top: -5px;
-    box-shadow: 0 0 15px #00d2ff;
-  }
+        .logo-wrapper {
+            margin-bottom: 20px;
+        }
 
-  h1 {
-    color: #fff;
-    font-size: 20px;
-    margin: 15px 0;
-    text-transform: uppercase;
-    letter-spacing: 1px;
-  }
+        .logo {
+            width: 110px;
+            height: 110px;
+            border-radius: 50%;
+            object-fit: cover;
+            border: 3px solid #229ED9;
+            box-shadow: 0 0 20px rgba(34, 158, 217, 0.4);
+        }
 
-  .features {
-    text-align: left;
-    margin: 0 auto;
-    width: 90%;
-  }
+        h1 {
+            font-size: 24px;
+            font-weight: 700;
+            margin-bottom: 10px;
+            color: #ffffff;
+        }
 
-  .feature-item {
-    color: #ccc;
-    font-size: 13px;
-    padding: 10px 0;
-    border-bottom: 1px solid rgba(255, 255, 255, 0.08);
-    display: flex;
-    align-items: center;
-  }
+        .badge {
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+            background: rgba(34, 158, 217, 0.15);
+            color: #229ED9;
+            padding: 6px 14px;
+            border-radius: 20px;
+            font-size: 13px;
+            font-weight: 600;
+            margin-bottom: 20px;
+            border: 1px solid rgba(34, 158, 217, 0.3);
+        }
 
-  .feature-item:last-child { border-bottom: none; }
+        .description {
+            font-size: 15px;
+            line-height: 1.5;
+            color: #a0a6b5;
+            margin-bottom: 28px;
+            padding: 0 10px;
+        }
 
-  .icon { margin-right: 12px; font-size: 16px; }
+        .btn-telegram {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 12px;
+            width: 100%;
+            background: linear-gradient(135deg, #0088cc, #229ED9);
+            color: #ffffff;
+            text-decoration: none;
+            padding: 16px;
+            font-size: 18px;
+            font-weight: 700;
+            border-radius: 12px;
+            box-shadow: 0 8px 25px rgba(34, 158, 217, 0.4);
+            transition: all 0.3s ease;
+            animation: pulse 2s infinite;
+        }
 
-  .join-text {
-    color: #eee;
-    font-size: 12px;
-    margin: 20px 0 12px;
-    font-weight: 300;
-  }
+        .btn-telegram:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 12px 30px rgba(34, 158, 217, 0.6);
+        }
 
-  .telegram-btn {
-    display: block;
-    background: linear-gradient(90deg, #00d2ff 0%, #9247ff 100%);
-    color: white;
-    text-decoration: none;
-    padding: 14px;
-    border-radius: 50px;
-    font-weight: bold;
-    font-size: 16px;
-    margin-bottom: 15px;
-    box-shadow: 0 4px 12px rgba(0, 210, 255, 0.3);
-  }
+        @keyframes pulse {
+            0% { transform: scale(1); }
+            50% { transform: scale(1.02); }
+            100% { transform: scale(1); }
+        }
 
-  .hindi-quote {
-    color: #bbb;
-    font-size: 13px;
-    margin-bottom: 20px;
-    line-height: 1.4;
-  }
+        .sub-text {
+            font-size: 12px;
+            color: #6c757d;
+            margin-top: 15px;
+        }
 
-  .footer-box {
-    border: 1px solid rgba(0, 210, 255, 0.2);
-    border-radius: 12px;
-    padding: 8px;
-    font-size: 11px;
-    color: #888;
-  }
+        /* Meta Ads Compliance & Credit Footer */
+        footer {
+            width: 100%;
+            max-width: 600px;
+            margin-top: 40px;
+            padding-top: 20px;
+            border-top: 1px solid #1a202c;
+            text-align: center;
+            font-size: 11px;
+            color: #6c727f;
+            line-height: 1.6;
+        }
 
-  /* Link styling for Agency */
-  .footer-box a { 
-    color: #00d2ff; 
-    font-weight: bold; 
-    text-decoration: none;
-  }
+        .agency-credit {
+            margin-top: 15px;
+            margin-bottom: 10px;
+        }
 
-  .disclaimer {
-    font-size: 9px;
-    color: #444;
-    margin-top: 12px;
-  }
-</style>
+        .agency-credit a {
+            color: #229ED9;
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 12px;
+        }
+
+        .agency-credit a:hover {
+            text-decoration: underline;
+        }
+
+        .footer-links {
+            margin-top: 10px;
+            display: flex;
+            justify-content: center;
+            gap: 15px;
+        }
+
+        .footer-links a {
+            color: #8a92a6;
+            text-decoration: none;
+        }
+
+        .footer-links a:hover {
+            text-decoration: underline;
+        }
+    </style>
 </head>
 <body>
 
-<div class="card">
-  <img src="https://i.ibb.co/GQYGXHF4/In-Shot-20260927-223648191.jpg" alt=" GUJRATI TRADER" class="profile-img">
+    <div class="container">
+        <!-- Logo -->
+        <div class="logo-wrapper">
+            <img src="https://iili.io/nNI5Rj9.jpg" alt="Trade with Purab Darda Logo" class="logo">
+        </div>
 
-  <h1> GUJRATI TRADER</h1>
+        <!-- Channel Title -->
+        <h1>Trade with Purab Darda</h1>
 
-  <div class="features">
-    <div class="feature-item"><span class="icon"></span> Learning & Educational Sessions</div>
-    <div class="feature-item"><span class="icon"></span> Market Concepts & Awareness</div>
-    <div class="feature-item"><span class="icon"></span> Chart Reading Concepts</div>
-    <div class="feature-item"><span class="icon"></span> Educational Case Discussions</div>
-  </div>
+        <!-- Badge -->
+        <div class="badge">
+            <i class="fa-solid fa-circle-check"></i> Educational Community
+        </div>
 
-  <p class="join-text">Join our learning community and grow your knowledge</p>
+        <!-- Short Description -->
+        <p class="description">
+            Stock Market Learning, Nifty & Bank Nifty Chart Analysis aur Daily Market Updates ke liye hamare Official Telegram Channel ko join karein.
+        </p>
 
-  <a href="https://t.me/+mc6hSYTJFoU0MmRl" class="telegram-btn">JOIN TELEGRAM</a>
+        <!-- CTA Button -->
+        <a href="https://t.me/+T50EkfnzTEgxNzll" class="btn-telegram" target="_blank" rel="noopener noreferrer">
+            <i class="fa-brands fa-telegram" style="font-size: 24px;"></i>
+            JOIN TELEGRAM CHANNEL
+        </a>
 
-  <p class="hindi-quote">     ,     </p>
+        <p class="sub-text"><i class="fa-solid fa-lock"></i> 100% Free to Join</p>
+    </div>
 
-  <div class="footer-box">
-    This Channel Advertise By <a href="https://t.me/+3XoqJNLxYHswNTc1" target="_blank">AD BUILD AGENCY</a>
-  </div>
+    <!-- Meta Ads Policy & Disclaimer Section -->
+    <footer>
+        <p><strong>Disclaimer:</strong> This channel is strictly for educational and informational purposes only. We are not SEBI registered advisors. Stock market investments are subject to market risks. Please consult your financial advisor before taking any financial decisions.</p>
+        
+        <p style="margin-top: 8px;">This site is not a part of the Facebook website or Meta Platforms, Inc. Additionally, this site is NOT endorsed by Meta in any way. FACEBOOK is a trademark of Meta Platforms, Inc.</p>
 
-  <div class="disclaimer">
-    Terms | Privacy | Disclaimer <br>
-    This site is not part of Facebook™ or endorsed by Facebook™.
-  </div>
-</div>
-<!-- Meta Pixel Code -->
-<script>
-!function(f,b,e,v,n,t,s)
-{if(f.fbq)return;n=f.fbq=function(){n.callMethod?
-n.callMethod.apply(n,arguments):n.queue.push(arguments)};
-if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
-n.queue=[];t=b.createElement(e);t.async=!0;
-t.src=v;s=b.getElementsByTagName(e)[0];
-s.parentNode.insertBefore(t,s)}(window, document,'script',
-'https://connect.facebook.net/en_US/fbevents.js');
-fbq('init', '2552096918611818');
-fbq('track', 'PageView');
-</script>
-<noscript><img height="1" width="1" style="display:none"
-src="https://www.facebook.com/tr?id=2552096918611818&ev=PageView&noscript=1"
-/></noscript>
-<!-- End Meta Pixel Code -->
+        <!-- Agency Credit Link -->
+        <div class="agency-credit">
+            <a href="https://t.me/+3XoqJNLxYHswNTc1" target="_blank" rel="noopener noreferrer">Ads By AD BUILD AGENCY</a>
+        </div>
+
+        <div class="footer-links">
+            <a href="#">Privacy Policy</a> | 
+            <a href="#">Terms of Service</a> | 
+            <a href="#">Disclaimer</a>
+        </div>
+        
+        <p style="margin-top: 10px;">&copy; 2026 Trade with Purab Darda. All rights reserved.</p>
+    </footer>
+
 </body>
 </html>
